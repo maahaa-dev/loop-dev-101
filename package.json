@@ -1,0 +1,27 @@
+{
+  "name": "loop-dev-101",
+  "version": "1.0.0",
+  "description": "Minimal agentic-loop demo: four loop shapes around one provider-agnostic LLM call.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Sushil Singh",
+  "engines": {
+    "node": ">=20.6"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test src/app/pricing.test.ts",
+    "reset": "cp src/app/pricing.buggy.ts src/app/pricing.ts",
+    "level1": "node --env-file=.env --import tsx src/run-level1.ts",
+    "level2": "node --env-file=.env --import tsx src/run-level2.ts",
+    "level3": "node --env-file=.env --import tsx src/run-level3.ts",
+    "level4": "node --env-file=.env --import tsx src/run-level4.ts",
+    "reset4": "rm -f src/app4/slug.ts src/app4/slug.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

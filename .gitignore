@@ -1,0 +1,7 @@
+node_modules/
+.env
+.DS_Store
+
+# level-4 generated artifacts (regenerated each run)
+src/app4/slug.ts
+src/app4/slug.test.ts
